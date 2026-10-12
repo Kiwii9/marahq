@@ -1,0 +1,17 @@
+{
+  "name": "marahq",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "images": "node get-images.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "description": "Marahq Q - livestock marketplace (React + Tailwind + Express API + Firebase)",
+  "optionalDependencies": {
+    "firebase-admin": "^13.0.0"
+  }
+}

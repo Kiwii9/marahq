@@ -1,0 +1,4 @@
+{
+  "apiKey": "PASTE_YOUR_FIREBASE_WEB_API_KEY_HERE",
+  "serviceAccount": "serviceAccountKey.json"
+}

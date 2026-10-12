@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مراح كيو — سوقك الموثوق لبيع وشراء المواشي والأضاحي</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&family=Inter:wght@400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (browser build, saved in /vendor): colours from the Figma design are registered once here -->
+  <script src="vendor/tailwind.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "Cairo", system-ui, sans-serif;
+      --color-bg: #faf6f2;
+      --color-primary: #bb5a34;
+      --color-brown: #87442f;
+      --color-brown-dark: #5d3d32;
+      --color-tan: #e2bea4;
+      --color-gray: #54545c;
+    }
+  </style>
+  <!-- Plain CSS: the landing page (hero masks etc.), animations -->
+  <link rel="stylesheet" href="design.css" />
+</head>
+<body class="bg-white font-sans text-[#1d1917] antialiased">
+  <!-- Recreates Figma's "Gradient map" shader on the hero photo: brightness -> white / #bb5a34 / white -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="gradient-map" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0 0 0 1 0"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="1 0.733 1"/><feFuncG type="table" tableValues="1 0.353 1"/><feFuncB type="table" tableValues="1 0.204 1"/>
+      </feComponentTransfer>
+    </filter>
+  </svg>
+  <div id="root"></div>
+  <script src="vendor/react.js"></script>
+  <script src="vendor/react-dom.js"></script>
+  <script src="vendor/babel.js"></script>
+  <script type="text/babel" data-presets="react" src="app.jsx"></script>
+</body>
+</html>
