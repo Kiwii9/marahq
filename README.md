@@ -4,7 +4,7 @@ A livestock and sacrifice (أضاحي) marketplace for Saudi Arabia. Buyers brow
 
 Built from a Figma design (Arabic, RTL) as a course project.
 
-**Stack:** React 18 + Tailwind CSS (front end), Node.js + Express (custom REST API), Firebase Authentication + Cloud Firestore (optional, falls back to a local JSON file).
+**Stack:** React 18 + Tailwind CSS (front end), Node.js + Express (custom REST API).
 
 | Login | Buyer dashboard |
 | --- | --- |
@@ -38,7 +38,6 @@ public/
   vendor/              React, ReactDOM, Babel and Tailwind, saved locally (no build step)
 get-images.js          downloads the real Figma images into public/assets
 assets-manifest.json   list of images for get-images.js
-firebase.config.json   put your Firebase Web API key here (optional)
 ```
 
 There is no build step: React and Tailwind run in the browser, which keeps the project small. A production site would pre-build them (for example with Vite).
@@ -53,7 +52,7 @@ npm run images     # optional: download the real Figma images (links expire afte
 npm start
 ```
 
-Open **http://localhost:3000**. Without Firebase, data is stored in a local `db.json` (delete it to reset).
+Open **http://localhost:3000**. Data is stored in a local `db.json` (delete it to reset).
 
 ### Demo accounts
 
@@ -65,10 +64,6 @@ Open **http://localhost:3000**. Without Firebase, data is stored in a local `db.
 | Admin | `admin@marahq.test` | `Admin@12345` |
 
 Try: log in as the pending seller (cannot publish), then log in as admin, open *توثيق البائعين*, press *اعتماد*, and the seller can now publish.
-
-## Firebase
-
-Firebase is optional. Setup steps are in [docs/FIREBASE.md](docs/FIREBASE.md).
 
 ## API
 
@@ -96,7 +91,7 @@ The server checks login and role on every request, and calculates all prices its
 
 ## بالعربي (ملخّص)
 
-**مراح كيو** منصة لبيع وشراء المواشي والأضاحي. الواجهة React + Tailwind، والـ API مكتوب بـ Node/Express، والتسجيل وقاعدة البيانات عبر Firebase (اختياري؛ بدونه تُحفظ البيانات في ملف محلي).
+**مراح كيو** منصة لبيع وشراء المواشي والأضاحي. الواجهة React + Tailwind، والـ API مكتوب بـ Node/Express، وتُحفظ البيانات في ملف محلي.
 
 - التشغيل: `npm install` ثم `npm start` ثم افتح `http://localhost:3000`.
 - الصور الأصلية من Figma: `npm run images`.
